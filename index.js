@@ -37,14 +37,14 @@ client.on("message", (message) => {
         if(command === "ping"){
             for(let a = 0; a<7; a++){
                 const tiempoTomado = Date.now() - message.createdTimestamp;
-                message.reply(`QUE PASA PUT4 QUERÉS QUE TE LA PONGA? ${tiempoTomado} ms`);
+                message.reply(`Tu ping es de: ${tiempoTomado} ms`);
             }
             return;
         }
         
         if(command === "add"){
             const numArgs = args.map(x => parseFloat(x)).reduce((counter,v) => counter += v);
-            message.reply(`Resultado de la suma: ${numArgs} - pajin`);
+            message.reply(`Resultado de la suma: ${numArgs} `);
             return;
 
         }
@@ -75,7 +75,7 @@ client.on("message", (message) => {
             var cantidadEnMiBilletera = cont - args || 0;
             
             if(cantidadEnMiBilletera < 0){
-                message.reply(`No puedes gastar más de lo que tienes, político estúpido!`);
+                message.reply(`No puedes gastar más de lo que tienes`);
                 return
             }
 
