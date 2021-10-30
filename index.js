@@ -22,7 +22,7 @@ client.on("message", (message) => {
         if(!message.content.startsWith(prefix)) return;
 
         if(message.member.voice.channel == null){
-            message.reply("Conectate PELOTUDO")
+            message.reply("Conectate antes de usarlo")
             return;
         }
 
